@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,13 +26,13 @@ public class PlayerMovement : MonoBehaviour
     public void Update()
     {
 
-        MovePlayer();
+       
 
     }
 
-    public void MovePlayer() 
+    public void MovePlayer(float input) 
     {
-        movementStrategy.Move(transform,player);
+        movementStrategy.Move(transform,player,input);
     }
    
     void FixedUpdate()
